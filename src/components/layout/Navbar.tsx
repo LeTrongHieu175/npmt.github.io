@@ -18,6 +18,7 @@ const navItems = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { mode, toggle } = useDarkMode();
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/50 bg-white/70 backdrop-blur-lg dark:border-white/10 dark:bg-[#16161b]/80">
@@ -49,7 +50,7 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="/cv.pdf" className="hidden xl:block">
+          <a href={`${baseUrl}cv.pdf`} className="hidden xl:block">
             <Button variant="outline">Download CV</Button>
           </a>
           <Button variant="ghost" onClick={toggle} aria-label="Toggle dark mode">
@@ -86,7 +87,7 @@ const Navbar = () => {
               </NavLink>
             ))}
             <div className="mt-4 flex items-center gap-3">
-              <a href="/cv.pdf">
+              <a href={`${baseUrl}cv.pdf`}>
                 <Button variant="outline">Download CV</Button>
               </a>
               <Button variant="ghost" onClick={toggle} aria-label="Toggle dark mode">

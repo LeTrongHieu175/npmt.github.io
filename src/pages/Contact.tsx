@@ -5,6 +5,7 @@ import PageTransition from "../components/ui/PageTransition";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 const Contact = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   usePageMeta("Liên hệ | Nguyễn Phan Mỹ Tiên", "Thông tin liên hệ và kết nối.");
 
   return (
@@ -24,7 +25,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button>Gửi lời mời phỏng vấn</Button>
-              <a href="/cv.pdf">
+              <a href={`${baseUrl}cv.pdf`}>
                 <Button variant="outline">Tải CV</Button>
               </a>
             </div>

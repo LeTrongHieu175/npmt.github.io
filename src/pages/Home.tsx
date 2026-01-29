@@ -8,6 +8,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import { events } from "../data/events";
 
 const Home = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   usePageMeta(
     "Nguyễn Phan Mỹ Tiên | CV",
     "CV online của Nguyễn Phan Mỹ Tiên - Quản lí nhà hàng tại An Giang/Cần Thơ."
@@ -21,7 +22,7 @@ const Home = () => {
             <div className="flex items-center gap-4">
               <div className="h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-card">
                 <img
-                  src="/IMG_1139.JPG"
+                  src={`${import.meta.env.BASE_URL}IMG_1139.JPG`}
                   alt="Nguyễn Phan Mỹ Tiên"
                   className="h-full w-full object-cover"
                 />
@@ -46,7 +47,7 @@ const Home = () => {
               <Tag tone="neutral">Quản lí vận hành</Tag>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="/cv.pdf">
+              <a href={`${baseUrl}cv.pdf`}>
                 <Button>Download CV</Button>
               </a>
               <Link to="/contact">

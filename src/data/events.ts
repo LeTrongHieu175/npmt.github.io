@@ -17,6 +17,8 @@ export type EventItem = {
   gallery?: string[];
 };
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 export const events: EventItem[] = [
   {
     id: "su-kien-01",
@@ -27,7 +29,7 @@ export const events: EventItem[] = [
     excerpt: "Tổ chức khai trương chi nhánh mới với 300 khách tham dự và chương trình trải nghiệm ẩm thực.",
     content:
       "Chương trình gồm khu vực check-in, trải nghiệm menu mới, và lễ cắt băng. Tôi phụ trách điều phối nhân sự, quản lí ngân sách và truyền thông nội bộ.",
-    coverImage: "/images/event-1.svg",
+    coverImage: asset("images/event-1.svg"),
     timeline: [
       {
         time: "08:00",
@@ -45,7 +47,7 @@ export const events: EventItem[] = [
         description: "Cắt băng khai trương và giới thiệu đội ngũ vận hành.",
       },
     ],
-    gallery: ["/gallery/gallery-1.svg", "/gallery/gallery-2.svg", "/gallery/gallery-3.svg"],
+    gallery: [asset("gallery/gallery-1.svg"), asset("gallery/gallery-2.svg"), asset("gallery/gallery-3.svg")],
   },
   {
     id: "su-kien-02",
@@ -56,7 +58,7 @@ export const events: EventItem[] = [
     excerpt: "Sự kiện tri ân với ưu đãi đặc biệt và hoạt động kết nối khách hàng.",
     content:
       "Tôi xây dựng kịch bản chương trình, phối hợp đối tác âm nhạc và đảm bảo trải nghiệm cá nhân hóa cho khách VIP.",
-    coverImage: "/images/event-2.svg",
+    coverImage: asset("images/event-2.svg"),
     timeline: [
       {
         time: "17:00",
@@ -69,7 +71,7 @@ export const events: EventItem[] = [
         description: "Trao quà và phát biểu từ ban quản lí.",
       },
     ],
-    gallery: ["/gallery/gallery-4.svg", "/gallery/gallery-2.svg", "/gallery/gallery-5.svg"],
+    gallery: [asset("gallery/gallery-4.svg"), asset("gallery/gallery-2.svg"), asset("gallery/gallery-5.svg")],
   },
   {
     id: "su-kien-03",
@@ -80,7 +82,7 @@ export const events: EventItem[] = [
     excerpt: "Workshop nâng cao kỹ năng phục vụ và quản lí ca cho 60 nhân sự.",
     content:
       "Tôi thiết kế bộ tài liệu, xây dựng case study và đánh giá năng lực sau đào tạo để cải thiện hiệu suất.",
-    coverImage: "/images/event-3.svg",
+    coverImage: asset("images/event-3.svg"),
     timeline: [
       {
         time: "09:00",
@@ -93,7 +95,7 @@ export const events: EventItem[] = [
         description: "Chia nhóm xử lý tình huống dịch vụ.",
       },
     ],
-    gallery: ["/gallery/gallery-3.svg", "/gallery/gallery-6.svg", "/gallery/gallery-2.svg"],
+    gallery: [asset("gallery/gallery-3.svg"), asset("gallery/gallery-6.svg"), asset("gallery/gallery-2.svg")],
   },
   {
     id: "su-kien-04",
@@ -104,7 +106,7 @@ export const events: EventItem[] = [
     excerpt: "Chiến dịch giới thiệu ẩm thực địa phương kết hợp truyền thông đa kênh.",
     content:
       "Tôi làm việc cùng đầu bếp để xây dựng menu và triển khai chiến dịch truyền thông trên mạng xã hội.",
-    coverImage: "/images/event-4.svg",
+    coverImage: asset("images/event-4.svg"),
     timeline: [
       {
         time: "Ngày 1",
@@ -117,7 +119,7 @@ export const events: EventItem[] = [
         description: "Kết nối đầu bếp với khách hàng trên mạng xã hội.",
       },
     ],
-    gallery: ["/gallery/gallery-5.svg", "/gallery/gallery-6.svg", "/gallery/gallery-1.svg"],
+    gallery: [asset("gallery/gallery-5.svg"), asset("gallery/gallery-6.svg"), asset("gallery/gallery-1.svg")],
   },
   {
     id: "su-kien-05",
@@ -128,7 +130,7 @@ export const events: EventItem[] = [
     excerpt: "Kết nối 12 đối tác chiến lược để mở rộng nguồn cung và marketing.",
     content:
       "Tôi chịu trách nhiệm điều phối hậu cần và chuẩn bị báo cáo hiệu quả hợp tác.",
-    coverImage: "/images/event-5.svg",
+    coverImage: asset("images/event-5.svg"),
     timeline: [
       {
         time: "08:30",
@@ -141,7 +143,7 @@ export const events: EventItem[] = [
         description: "Ký kết biên bản ghi nhớ với đối tác.",
       },
     ],
-    gallery: ["/gallery/gallery-4.svg", "/gallery/gallery-3.svg", "/gallery/gallery-6.svg"],
+    gallery: [asset("gallery/gallery-4.svg"), asset("gallery/gallery-3.svg"), asset("gallery/gallery-6.svg")],
   },
   {
     id: "su-kien-06",
@@ -152,7 +154,7 @@ export const events: EventItem[] = [
     excerpt: "Tổ chức tặng suất ăn và hoạt động cộng đồng cho 200 hộ dân.",
     content:
       "Tôi phối hợp đội ngũ tình nguyện viên, quản lí quyên góp và lập báo cáo minh bạch.",
-    coverImage: "/images/event-6.svg",
+    coverImage: asset("images/event-6.svg"),
     timeline: [
       {
         time: "07:30",
@@ -165,7 +167,7 @@ export const events: EventItem[] = [
         description: "Trao quà, ghi nhận phản hồi từ người dân.",
       },
     ],
-    gallery: ["/gallery/gallery-2.svg", "/gallery/gallery-1.svg", "/gallery/gallery-5.svg"],
+    gallery: [asset("gallery/gallery-2.svg"), asset("gallery/gallery-1.svg"), asset("gallery/gallery-5.svg")],
   },
   {
     id: "su-kien-07",
@@ -176,7 +178,7 @@ export const events: EventItem[] = [
     excerpt: "Diễn tập xử lý sự cố nhằm đảm bảo an toàn và quy trình dịch vụ.",
     content:
       "Tôi xây dựng kịch bản và đánh giá sau diễn tập để cải thiện quy trình.",
-    coverImage: "/images/event-7.svg",
+    coverImage: asset("images/event-7.svg"),
     timeline: [
       {
         time: "09:00",
@@ -189,7 +191,7 @@ export const events: EventItem[] = [
         description: "Đội ngũ xử lý tình huống mô phỏng.",
       },
     ],
-    gallery: ["/gallery/gallery-6.svg", "/gallery/gallery-4.svg", "/gallery/gallery-3.svg"],
+    gallery: [asset("gallery/gallery-6.svg"), asset("gallery/gallery-4.svg"), asset("gallery/gallery-3.svg")],
   },
   {
     id: "su-kien-08",
@@ -200,7 +202,7 @@ export const events: EventItem[] = [
     excerpt: "Cuộc thi nâng cao tay nghề phục vụ và kỹ năng xử lý tình huống.",
     content:
       "Tôi tổ chức hệ thống đánh giá, tiêu chí chấm điểm và chương trình trao giải.",
-    coverImage: "/images/event-8.svg",
+    coverImage: asset("images/event-8.svg"),
     timeline: [
       {
         time: "08:00",
@@ -213,7 +215,7 @@ export const events: EventItem[] = [
         description: "Vinh danh đội nhóm xuất sắc.",
       },
     ],
-    gallery: ["/gallery/gallery-1.svg", "/gallery/gallery-5.svg", "/gallery/gallery-2.svg"],
+    gallery: [asset("gallery/gallery-1.svg"), asset("gallery/gallery-5.svg"), asset("gallery/gallery-2.svg")],
   },
   {
     id: "su-kien-09",
@@ -224,7 +226,7 @@ export const events: EventItem[] = [
     excerpt: "Chia sẻ kinh nghiệm quản lí dịch vụ và tối ưu trải nghiệm khách hàng.",
     content:
       "Tôi điều phối nội dung, mời khách mời chuyên môn và tổng hợp tài liệu.",
-    coverImage: "/images/event-9.svg",
+    coverImage: asset("images/event-9.svg"),
     timeline: [
       {
         time: "13:30",
@@ -237,7 +239,7 @@ export const events: EventItem[] = [
         description: "Kết nối đại biểu và khách mời.",
       },
     ],
-    gallery: ["/gallery/gallery-3.svg", "/gallery/gallery-4.svg", "/gallery/gallery-6.svg"],
+    gallery: [asset("gallery/gallery-3.svg"), asset("gallery/gallery-4.svg"), asset("gallery/gallery-6.svg")],
   },
   {
     id: "su-kien-10",
@@ -248,7 +250,7 @@ export const events: EventItem[] = [
     excerpt: "Sự kiện tổng kết với báo cáo thành tích và kế hoạch năm mới.",
     content:
       "Tôi phụ trách chương trình vinh danh, báo cáo KPI và kế hoạch đào tạo.",
-    coverImage: "/images/event-10.svg",
+    coverImage: asset("images/event-10.svg"),
     timeline: [
       {
         time: "18:00",
@@ -261,6 +263,6 @@ export const events: EventItem[] = [
         description: "Trao thưởng cho cá nhân, tập thể xuất sắc.",
       },
     ],
-    gallery: ["/gallery/gallery-2.svg", "/gallery/gallery-6.svg", "/gallery/gallery-4.svg"],
+    gallery: [asset("gallery/gallery-2.svg"), asset("gallery/gallery-6.svg"), asset("gallery/gallery-4.svg")],
   },
 ];

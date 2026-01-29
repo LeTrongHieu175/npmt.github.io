@@ -21,7 +21,7 @@ const Home = () => {
             <div className="flex items-center gap-4">
               <div className="h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-card">
                 <img
-                  src="/avatar.svg"
+                  src="public/IMG_1139.JPG"
                   alt="Nguyễn Phan Mỹ Tiên"
                   className="h-full w-full object-cover"
                 />
